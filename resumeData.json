@@ -1,0 +1,193 @@
+{
+  "main": {
+    "name":"Billy Pesoth",
+    "description":"I code worlds, both on the web and in games. From snappy dashboards to epic game levels — I build stuff that people actually want to click, tap, and play.",
+    "image":"profilepicnew.jpg",
+    "bio":"Full stack by trade, game dev by passion. I work with React, Vue, and Node for the web, while Unity and C# power the worlds I create in games. Obsessed with clean code, smooth UX, and turning wild ideas into something you can actually play or click.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "billy.pesoth@gmail.com",
+    "phone": "+6285146313141",
+    "github":"https://github.com/billybep",
+    "project":"https://github.com/nordicgiant2/react-nice-resume",
+    "address":{
+     "street": "Walanda Maramis Street",
+    "city": "Tondano",
+    "state": "North Sulawesi",
+    "zip": "95614"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload":"https://drive.google.com/file/d/1wiQ45Ax17H5LjTsk0g1WDE-yqnOlBSPJ/view?usp=sharing",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/billypesoth",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"https://instagram.com/billy_bep",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/billybep",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "education":[
+      {
+        "school":"Universitas Klabat",
+        "degree":"Bachelor of Science",
+        "graduated":"May 2015",
+        "description":"I gained skills in programming, databases, system analysis, and teamwork through various projects."
+      },
+      {
+        "school":"Hacktiv8 Indonesia",
+        "degree":"Full Stack Developer",
+        "graduated":"June 2021",
+        "description":"Graduated from Hacktiv8’s intensive Fullstack Developer bootcamp, where I built real-world projects while mastering modern web technologies — from JavaScript to Sequelize, MongoDB, React, and Vue."
+      }
+    ],
+    "work":[
+      {
+        "company": "Big Dade Interactive",
+        "title": "Unity Developer",
+        "years": "November 2022 - Present",
+        "description": "Developing mobile and desktop games using Unity. Responsible for game mechanics implementation, optimization, and feature updates while collaborating with designers and artists."
+      },
+      {
+        "company": "Ecosoft Interactive",
+        "title": "Unity Developer",
+        "years": "February 2025 - May 2025",
+        "description": "Worked on Unity-based projects for mobile platforms, integrating assets and scripting core gameplay features in collaboration with an international team."
+      },
+      {
+        "company": "FXMedia / FXMWeb",
+        "title": "Unity Developer Intern",
+        "years": "March 2024 - February 2025",
+        "description": "Created scripts and integrated 3D models, animations, and GUI elements for desktop, mobile, VR, and AR projects. Gained hands-on experience in AI development with Unity 3D."
+      },
+      {
+        "company": "NADI Health",
+        "title": "Full Stack Developer",
+        "years": "March 2022 - September 2022",
+        "description": "Built and maintained web and mobile solutions. Developed admin front-end using React JS and implemented mobile UI with Ionic."
+      },
+      {
+        "company": "PCMan Indonesia",
+        "title": "Software Developer",
+        "years": "August 2021 - June 2022",
+        "description": "Configured LAMP server environments, modified and enhanced existing software, and created plugins and themes for Moodle-based learning systems."
+      },
+      {
+        "company": "Wise Hotel Tomohon",
+        "title": "IT Network Support",
+        "years": "May 2019 - August 2019",
+        "description": "Maintained hotel IT infrastructure, performed daily checks on all network-connected computers, and troubleshooted hardware and software issues."
+      },
+      {
+        "company": "PT. Bank Perkreditan Rakyat Millenia",
+        "title": "IT System Administrator",
+        "years": "June 2016 - February 2018",
+        "description": "Managed core banking system accounts, roles, and access control. Monitored daily system operations and performed regular backups of databases and systems."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Unity",
+        "level":"90%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"85%"
+      },
+      {
+        "name":"VueJs",
+        "level":"60%"
+      },
+      {
+        "name":"PHP",
+        "level":"60%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"01.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      },
+      {
+        "title":"Fury Fighting Gear",
+        "category":"(offline now) A fighting gear company I started",
+        "image":"02.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Original Thai Food",
+        "category":"Website I built for a restaurant I like in Thailand",
+        "image":"03.jpg",
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title":"Resume Website",
+        "category":"A React based resume website template",
+        "image":"04.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Smirkspace",
+        "category":"(MVP Only) A React and Meteor based chat University project.",
+        "image":"05.jpg",
+        "url":"http://www.smirkspace.com"
+      },
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"06.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      },
+      {
+        "title":"Fury Fighting Gear",
+        "category":"(offline now) A fighting gear company I started",
+        "image":"01.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Original Thai Food",
+        "category":"Website I built for a restaurant I like in Thailand",
+        "image":"02.jpg",
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title":"Original Thai Food",
+        "category":"Website I built for a restaurant I like in Thailand",
+        "image":"03.jpg",
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title":"Resume Website",
+        "category":"A React based resume website template",
+        "image":"04.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Smirkspace",
+        "category":"(MVP Only) A React and Meteor based chat University project.",
+        "image":"05.jpg",
+        "url":"http://www.smirkspace.com"
+      },
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"06.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      }
+    ]
+  }
+}
