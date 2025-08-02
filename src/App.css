@@ -1,0 +1,21 @@
+/* Pastikan konten di atas particles */
+.Header, 
+.About, 
+.Resume, 
+.Portfolio, 
+.Contact, 
+.Footer {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9); /* Optional: untuk readability */
+}
+
+/* Optional: sesuaikan tampilan particles */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}

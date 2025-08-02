@@ -59,13 +59,13 @@ header .banner-text h1 {
    font: 90px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
-   margin: 0 auto 18px auto;
+   margin: 0 auto 50px auto;
 }
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
    color: #ddd;
    margin: 0 auto;
-   width: 70%;
+   width: 80%;
 }
 header .banner-text h3 span,
 header .banner-text h3 a {
@@ -81,8 +81,14 @@ header .banner-text hr {
 /* header social links */
 header .social {
    margin: 24px 0;
+   margin-top: 2em;
    padding: 0;
    font-size: 30px;
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   padding: 0;
+   list-style: none;
 }
 header .social li {
    display: inline-block;
@@ -112,7 +118,7 @@ header .scrolldown a {
    -o-transition: all .3s ease-in-out;
    transition: all .3s ease-in-out;
 }
-header .scrolldown a:hover { color: #0762f9; }
+header .scrolldown a:hover { color: #1abc9c; }
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -182,6 +188,7 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #about {
+   /* background: #000524; */
    background: #000524;
    padding-top: 96px;
    padding-bottom: 66px;
@@ -205,7 +212,57 @@ ul#nav li.current a { color: #fe6928; }
    width: 120px;
    height: 120px;
    border-radius: 100%;
+   position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* Efek Border Gradient */
+  border: 3px solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff), 
+                    linear-gradient(45deg, #ff00cc, #3333ff);
+  
+  /* Efek Shadow Dasar */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
 }
+
+#about .profile-pic:hover {
+  /* Gabungan Efek */
+  transform: perspective(500px) rotateY(15deg) scale(1.1);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  
+  /* Animasi Gradient Border */
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff), 
+                    linear-gradient(45deg, #ff00cc, #00ccff);
+  animation: gradientMove 3s ease infinite;
+  
+  /* Efek Glow & Shadow */
+  box-shadow: 0 0 20px rgba(100,200,255,0.6),
+              inset 0 0 20px rgba(255,255,255,0.3);
+  filter: drop-shadow(0 0 15px #00ffff) brightness(1.05);
+  
+  /* Efek Pulsing */
+  animation: pulse 2s infinite, gradientMove 3s ease infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0,255,255,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(0,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,255,255,0); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 #about .contact-details { width: 41.66667%; }
 #about .download {
    width: 58.33333%;
@@ -231,7 +288,7 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #resume {
-   background: #fff;
+   background: #E9F5EC;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
@@ -293,7 +350,7 @@ ul#nav li.current a { color: #fe6928; }
 .bars li {
    position: relative;
   	margin-bottom: 60px;
-  	background: #333;
+  	background: #c2c2c2;
   	height: 42px;
   	border-radius: 0px;
 }
@@ -758,7 +815,7 @@ call-to-action .button {
     margin: 0 6px;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
 }
 .flex-control-paging li a {
     width: 12px;
@@ -792,7 +849,7 @@ call-to-action .button {
    background: #191919;
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #636363;
+   color: #F1EDEE;
 }
 #contact .section-head { margin-bottom: 42px; }
 
@@ -845,7 +902,7 @@ call-to-action .button {
 #contact select {
    padding: 10px 20px;
 	color: #eee;
-	background: #373233;
+	background: #1abc9c;
 	margin-bottom: 42px;
 	border: 0;
 	outline: none;
@@ -857,7 +914,7 @@ call-to-action .button {
 #contact textarea:focus,
 #contact select:focus {
 	color: #fff;
-	background-color: #0762f9;
+	background-color: #bc351a;
 }
 #contact button.submit {
 	text-transform: uppercase;
@@ -928,14 +985,14 @@ call-to-action .button {
 footer {
    padding-top: 48px;
    margin-bottom: 48px;
-   color: #303030;
+   color: #c3c3c3;
    font-size: 14px;
    text-align: center;
    position: relative;
 }
 
-footer a, footer a:visited { color: #525252; }
-footer a:hover, footer a:focus { color: #fff; }
+footer a, footer a:visited { color: #ffffff; }
+footer a:hover, footer a:focus { color: #1abc9c; }
 
 /* copyright */
 footer .copyright {
@@ -955,7 +1012,7 @@ footer .copyright li:before {
     content: "\2022";
     padding-left: 10px;
     padding-right: 10px;
-    color: #095153;
+    color: #059095;
 }
 footer .copyright  li:first-child:before {
     display: none;
@@ -1021,4 +1078,125 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 .github-btn{
    background-color: #34495e !important;
+}
+
+/* Style dasar tombol */
+.button.btn {
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Efek hover */
+.project-btn:hover {
+  outline: 2px solid #1abc9c;
+  outline-offset: 2px; /* Jarak outline dari elemen */
+}
+
+.github-btn:hover {
+  outline: 2px solid #34495e;
+  outline-offset: 2px; /* Jarak outline dari elemen */
+}
+
+/* Custom Text Effect */
+/* Base Underline Effect */
+.underline-effect {
+  display: inline;
+  background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+  padding-bottom: 2px; /* Space for underline */
+  box-decoration-break: clone; /* For multi-line support */
+  -webkit-box-decoration-break: clone;
+}
+
+.underline-effect:hover {
+  background-size: 100% 1px;
+}
+
+/* Color Variants */
+.underline-effect--yellow {
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+}
+
+.underline-effect--gradient {
+  background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
+}
+
+/* Thickness Variants */
+.underline-effect--thin {
+  background-size: 0 1px;
+}
+
+.underline-effect--thick {
+  background-size: 0 3px;
+  padding-bottom: 3px;
+}
+
+/* Direction Variants */
+.underline-effect--reverse {
+  background-position: 100% 100%;
+  transition: background-size 0.5s ease-out;
+}
+
+.underline-effect--center {
+  background-position: 50% 100%;
+  background-size: 0 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.underline-effect--center:hover {
+  background-size: 100% 2px;
+}
+
+/* BASE EFFECT */
+.underline-magic {
+  display: inline;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+  background-size: 0 100%;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding-bottom: 2px;
+}
+
+/* OFFSET EFFECT */
+.underline-magic--offset {
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 0.8em; /* Posisi lebih tinggi dari baseline */
+  /* box-shadow: inset 0 -0.5em 0 0 white; Masking shadow */
+}
+
+.underline-magic--offset:hover {
+  background-size: 100% 30%; /* Hanya cover sebagian teks */
+}
+
+/* GRADIENT EFFECT (TEBAL) */
+.underline-magic--gradient {
+  background-image: linear-gradient(to right, 
+    #00f2ff 0%, 
+    #00f2ff 25%, 
+    #ff00f7 50%, 
+    #ff0066 100%);
+  background-position: 0 0.9em;
+  background-size: 0 35%;
+  transition: background-size 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+.underline-magic--gradient:hover {
+  background-size: 100% 40%;
+}
+
+/* VARIASI LAIN */
+.underline-magic--thick {
+  background-image: linear-gradient(to right, black 0, black 100%);
+  background-position: 0 0.7em;
+  background-size: 0 30%;
+}
+
+.underline-magic--reverse {
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 100% 0.8em;
+  transition: background-size 1s ease;
 }

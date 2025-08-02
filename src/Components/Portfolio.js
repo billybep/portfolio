@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Zmage from "react-zmage";
-import Fade from "react-reveal";
+// import Fade from "react-reveal";
+import { Fade } from 'react-awesome-reveal';
+
+// import Spline from '@splinetool/react-spline';
+
 
 let id = 0;
 class Portfolio extends Component {
@@ -35,6 +39,7 @@ class Portfolio extends Component {
               </div>
             </div>
           </div>
+          {/* <Spline scene="https://prod.spline.design/APCFcVnChQFSuMjP/scene.splinecode" /> */}
         </Fade>
       </section>
     );

@@ -1,46 +1,36 @@
 {
   "main": {
-    "name":"Nordic-Giant Project",
-    "description":"I am a web development engineer and I use react and vue.js to develop pages. This project is a resume template that can be used as the project home page or resume page",
-    "image":"profilepic.jpg",
-    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+    "name":"Billy Pesoth",
+    "description":"I code worlds, both on the web and in games. From snappy dashboards to epic game levels — I build stuff that people actually want to click, tap, and play.",
+    "image":"profilepicnew.jpg",
+    "bio":"Full stack by trade, game dev by passion. I work with React, Vue, and Node for the web, while Unity and C# power the worlds I create in games. Obsessed with clean code, smooth UX, and turning wild ideas into something you can actually play or click.",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
-    "email": "youremailhere@gmail.com",
-    "phone": "555-555-5555",
-    "github":"https://github.com/nordicgiant2/react-nice-resume",
+    "email": "billy.pesoth@gmail.com",
+    "phone": "+6285146313141",
+    "github":"https://github.com/billybep",
     "project":"https://github.com/nordicgiant2/react-nice-resume",
     "address":{
-      "street":"(Your Street)",
-      "city":"(Your City)",
-      "state":"(Your State)",
-      "zip": "(Your Zip/Postal Code)"
+     "street": "Walanda Maramis Street",
+    "city": "Tondano",
+    "state": "North Sulawesi",
+    "zip": "95614"
     },
     "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
+    "resumedownload":"https://drive.google.com/file/d/1wiQ45Ax17H5LjTsk0g1WDE-yqnOlBSPJ/view?usp=sharing",
     "social":[
       {
-        "name":"facebook",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
-        "className":"fa fa-facebook"
-      },
-      {
-        "name":"twitter",
-        "url":"http://twitter.com",
-        "className":"fa fa-twitter"
-      },
-      {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
+        "url":"https://www.linkedin.com/in/billypesoth",
         "className":"fa fa-linkedin"
       },
       {
         "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
+        "url":"https://instagram.com/billy_bep",
         "className":"fa fa-instagram"
       },
       {
         "name":"github",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
+        "url":"https://github.com/billybep",
         "className":"fa fa-github"
       }
     ]
@@ -49,60 +39,78 @@
     "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
     "education":[
       {
-        "school":"University?",
-        "degree":"Masters in Beer tasting",
-        "graduated":"April 2017",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "school":"Universitas Klabat",
+        "degree":"Bachelor of Science",
+        "graduated":"May 2015",
+        "description":"I gained skills in programming, databases, system analysis, and teamwork through various projects."
       },
       {
-        "school":"School #1 Maybe College?",
-        "degree":"What did you study 101",
-        "graduated":"March 2013",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "school":"Hacktiv8 Indonesia",
+        "degree":"Full Stack Developer",
+        "graduated":"June 2021",
+        "description":"Graduated from Hacktiv8’s intensive Fullstack Developer bootcamp, where I built real-world projects while mastering modern web technologies — from JavaScript to Sequelize, MongoDB, React, and Vue."
       }
     ],
     "work":[
       {
-        "company":"Awesome Design Studio",
-        "title":"Senior UX God ",
-        "years":"March 2018 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company": "Big Dade Interactive",
+        "title": "Unity Developer",
+        "years": "November 2022 - Present",
+        "description": "Developing mobile and desktop games using Unity. Responsible for game mechanics implementation, optimization, and feature updates while collaborating with designers and artists."
       },
       {
-        "company":"Super Cool Studio",
-        "title":"Junior bug fixer",
-        "years":"March 2017 - February 2018",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company": "Ecosoft Interactive",
+        "title": "Unity Developer",
+        "years": "February 2025 - May 2025",
+        "description": "Worked on Unity-based projects for mobile platforms, integrating assets and scripting core gameplay features in collaboration with an international team."
+      },
+      {
+        "company": "FXMedia / FXMWeb",
+        "title": "Unity Developer Intern",
+        "years": "March 2024 - February 2025",
+        "description": "Created scripts and integrated 3D models, animations, and GUI elements for desktop, mobile, VR, and AR projects. Gained hands-on experience in AI development with Unity 3D."
+      },
+      {
+        "company": "NADI Health",
+        "title": "Full Stack Developer",
+        "years": "March 2022 - September 2022",
+        "description": "Built and maintained web and mobile solutions. Developed admin front-end using React JS and implemented mobile UI with Ionic."
+      },
+      {
+        "company": "PCMan Indonesia",
+        "title": "Software Developer",
+        "years": "August 2021 - June 2022",
+        "description": "Configured LAMP server environments, modified and enhanced existing software, and created plugins and themes for Moodle-based learning systems."
+      },
+      {
+        "company": "Wise Hotel Tomohon",
+        "title": "IT Network Support",
+        "years": "May 2019 - August 2019",
+        "description": "Maintained hotel IT infrastructure, performed daily checks on all network-connected computers, and troubleshooted hardware and software issues."
+      },
+      {
+        "company": "PT. Bank Perkreditan Rakyat Millenia",
+        "title": "IT System Administrator",
+        "years": "June 2016 - February 2018",
+        "description": "Managed core banking system accounts, roles, and access control. Monitored daily system operations and performed regular backups of databases and systems."
       }
     ],
     "skills":[
       {
-        "name":"Python",
-        "level":"60%"
-      },
-      {
-        "name":"VueJs",
-        "level":"55%"
-      },
-      {
-        "name":"ReactJs",
-        "level":"50%"
-      },
-      {
-        "name":"CSS",
+        "name":"Unity",
         "level":"90%"
       },
       {
+        "name":"ReactJs",
+        "level":"85%"
+      },
+      {
+        "name":"VueJs",
+        "level":"60%"
+      },
+      {
         "name":"PHP",
-        "level":"80%"
-      },
-      {
-        "name":"Swift",
-        "level":"50%"
-      },
-      {
-        "name":"JAVA",
-        "level":"80%"
+        "level":"60%"
       }
     ]
   },
