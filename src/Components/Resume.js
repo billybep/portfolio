@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Slide from "react-reveal";
+// import Slide from "react-reveal";
+import { Slide } from 'react-awesome-reveal';
+
 
 class Resume extends Component {
   getRandomColor() {
@@ -93,7 +95,7 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              <p>{skillmessage}</p>
+              {/* <p>{skillmessage}</p> */}
 
               <div className="bars">
                 <ul className="skills">{skills}</ul>
