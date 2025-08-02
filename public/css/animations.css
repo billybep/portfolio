@@ -1,0 +1,287 @@
+
+/* ===== SKILLS BAR ANIMATIONS ===== */
+.bars {
+  padding: 20px 0;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  position: relative;
+  height: 40px;
+  margin-bottom: 30px;
+  background: rgba(118, 118, 118, 0.8);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 2px 10px rgba(0,0,0,0.1),
+    inset 0 1px 3px rgba(255,255,255,0.1);
+}
+
+.bar-expand {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 20px;
+  /* Animation when component mounts */
+  animation: skillLoad 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+  transform-origin: left center;
+  transform: scaleX(0);
+  /* Gradient background animation */
+  background: linear-gradient(90deg, 
+    var(--skill-color, #ff00cc), 
+    #3333ff) !important;
+  background-size: 200% 100%;
+  transition: all 0.4s ease;
+}
+
+.skills li em {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* Keyframe animations */
+@keyframes skillLoad {
+  0% { 
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% { 
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* Hover effects */
+.skills li:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 5px 15px rgba(100,200,255,0.3),
+    inset 0 1px 3px rgba(255,255,255,0.2);
+}
+
+.skills li:hover .bar-expand {
+  background-position: 100% 0;
+  box-shadow: 
+    0 0 10px rgba(255,255,255,0.4),
+    inset 0 0 10px rgba(255,255,255,0.2);
+  filter: brightness(1.1);
+}
+
+/* Pulse effect for current skill */
+@keyframes skillPulse {
+  0% { box-shadow: 0 0 0 0 rgba(100,200,255,0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(100,200,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(100,200,255,0); }
+}
+
+.skills li:active .bar-expand {
+  animation: skillPulse 1s ease;
+}
+
+
+/* -- Tech Stack Icon Animation -- */
+/* Layout */
+.tech-stack {
+  padding: 80px 0;
+  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+}
+
+.tech-stack-title {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 2.8rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Icon Styles */
+.tech-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+.tech-name {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.tech-tooltip {
+  position: absolute;
+  top: -25px;
+  background: #11ABB0;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+@keyframes glow {
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(255,255,255,0.3)); }
+  50% { filter: drop-shadow(0 0 15px rgba(255,255,255,0.7)); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Assign Animations */
+.bounce { animation: bounce 2s ease infinite; }
+.float { animation: float 3s ease-in-out infinite; }
+.spin { animation: spin 6s linear infinite; }
+.pulse { animation: pulse 2s ease infinite; }
+.wave { animation: wave 2s ease infinite; }
+.glow { animation: glow 2s ease infinite; }
+.shake { animation: shake 0.5s ease infinite; }
+
+/* Hover Effects */
+.tech-icon:hover {
+    transform: translateY(-2px) scale(1.2); /* Naik 5px dan membesar 10% */
+    transition: transform 0.3s ease-out; /* Animasi lebih smooth */
+}
+
+.tech-icon:hover .tech-logo {
+  transform: scale(1.15);
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.3));
+}
+
+.tech-icon:hover .tech-name {
+  color: #11ABB0;
+  opacity: 1;
+}
+
+.tech-icon:hover .tech-tooltip {
+  opacity: 1;
+  top: -30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 25px;
+  }
+  
+  .tech-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+/*  */
+.tech-stack-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.tech-stack-scroller {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.tech-icon {
+  flex: 0 0 auto;
+  margin: 0 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Individual animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add other animation styles as needed */
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hover pause effect */
+.tech-stack-container:hover .tech-stack-scroller {
+  /* animation-play-state: paused; */
+}
+
+.tech-stack-container:hover .tech-logo {
+  transform: scale(1.2);
+}

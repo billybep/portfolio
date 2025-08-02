@@ -18,7 +18,7 @@ class About extends Component {
 
     return (
       <section id="about">
-        <Fade delay={1000}>
+        <Fade delay={300}>
           <div className="row">
             <div className="three columns">
               <img
@@ -50,7 +50,7 @@ class About extends Component {
                 </div>
                 <div className="columns download">
                   <p>
-                    <a href={resumeDownload} className="button">
+                    <a href={resumeDownload} className="button button-base" target="_blank" rel="noopener noreferrer">
                       <i className="fa fa-download"></i>Download Resume
                     </a>
                   </p>
