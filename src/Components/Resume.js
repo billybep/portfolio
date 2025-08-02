@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import Slide from "react-reveal";
-import { Slide } from 'react-awesome-reveal';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 
 class Resume extends Component {
@@ -33,7 +33,10 @@ class Resume extends Component {
     const work = this.props.data.work.map(function (work) {
       return (
         <div key={work.company}>
-          <h3>{work.company}</h3>
+          <h3>
+            {work.company}
+            {/* <em className="place"> {work.place}</em> */}
+          </h3>
           <p className="info">
             {work.title}
             <span>&bull;</span> <em className="date">{work.years}</em>
@@ -95,7 +98,7 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              {/* <p>{skillmessage}</p> */}
+              <h5>{skillmessage}</h5>
 
               <div className="bars">
                 <ul className="skills">{skills}</ul>
@@ -103,6 +106,46 @@ class Resume extends Component {
             </div>
           </div>
         </Slide>
+
+       <Fade duration={500}>
+          <div className="row tech-stack">
+            <div className="twelve columns">
+              <div className="tech-stack-container">
+                <div className="tech-stack-scroller">
+                  {/* First set */}
+                  {this.props.data.techStack.map((tech, index) => (
+                    <div 
+                      key={`first-${tech.name}`}
+                      className="tech-icon"
+                      data-category={tech.category}
+                    >
+                      <img 
+                        src={`/images/tech-stack/${tech.icon}`} 
+                        alt={tech.name}
+                        className={`tech-logo ${tech.animation}`}
+                      />
+                    </div>
+                  ))}
+                  
+                  {/* Duplicate for seamless looping */}
+                  {this.props.data.techStack.map((tech, index) => (
+                    <div 
+                      key={`second-${tech.name}`}
+                      className="tech-icon"
+                      data-category={tech.category}
+                    >
+                      <img 
+                        src={`/images/tech-stack/${tech.icon}`} 
+                        alt={tech.name}
+                        className={`tech-logo ${tech.animation}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </Fade>
       </section>
     );
   }
