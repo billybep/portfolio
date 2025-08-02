@@ -8,7 +8,7 @@
     "email": "billy.pesoth@gmail.com",
     "phone": "+6285146313141",
     "github":"https://github.com/billybep",
-    "project":"https://github.com/nordicgiant2/react-nice-resume",
+    "project":"https://www.canva.com/design/DAGftNeY7ek/KwjfXWHv3W_-awU5tKoOrg/view?utm_content=DAGftNeY7ek&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha5a5ea5b67",
     "address":{
      "street": "Walanda Maramis Street",
     "city": "Tondano",
@@ -36,7 +36,7 @@
     ]
   },
   "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "skillmessage":"Here’s an overview of the core skills I bring to every project.",
     "education":[
       {
         "school":"Universitas Klabat",
@@ -56,43 +56,36 @@
         "company": "Big Dade Interactive",
         "title": "Unity Developer",
         "years": "November 2022 - Present",
+        "place": "Manado - Indonesia",
         "description": "Developing mobile and desktop games using Unity. Responsible for game mechanics implementation, optimization, and feature updates while collaborating with designers and artists."
       },
       {
         "company": "Ecosoft Interactive",
         "title": "Unity Developer",
         "years": "February 2025 - May 2025",
+        "place": "California - Remote",
         "description": "Worked on Unity-based projects for mobile platforms, integrating assets and scripting core gameplay features in collaboration with an international team."
       },
       {
         "company": "FXMedia / FXMWeb",
         "title": "Unity Developer Intern",
         "years": "March 2024 - February 2025",
+        "place": "Singapore - Remote",
         "description": "Created scripts and integrated 3D models, animations, and GUI elements for desktop, mobile, VR, and AR projects. Gained hands-on experience in AI development with Unity 3D."
       },
       {
         "company": "NADI Health",
         "title": "Full Stack Developer",
         "years": "March 2022 - September 2022",
+        "place": "Malaysia - Remote",
         "description": "Built and maintained web and mobile solutions. Developed admin front-end using React JS and implemented mobile UI with Ionic."
       },
       {
         "company": "PCMan Indonesia",
         "title": "Software Developer",
         "years": "August 2021 - June 2022",
+        "place": "Jakarta - Remote",
         "description": "Configured LAMP server environments, modified and enhanced existing software, and created plugins and themes for Moodle-based learning systems."
-      },
-      {
-        "company": "Wise Hotel Tomohon",
-        "title": "IT Network Support",
-        "years": "May 2019 - August 2019",
-        "description": "Maintained hotel IT infrastructure, performed daily checks on all network-connected computers, and troubleshooted hardware and software issues."
-      },
-      {
-        "company": "PT. Bank Perkreditan Rakyat Millenia",
-        "title": "IT System Administrator",
-        "years": "June 2016 - February 2018",
-        "description": "Managed core banking system accounts, roles, and access control. Monitored daily system operations and performed regular backups of databases and systems."
       }
     ],
     "skills":[
@@ -111,6 +104,93 @@
       {
         "name":"PHP",
         "level":"60%"
+      }
+    ],
+    "techStack":[
+      {
+        "name": "React",
+        "icon": "react.png",
+        "animation": "bounce" 
+      },
+      { 
+        "name": "Node.js",
+        "icon": "nodejs.png",
+        "animation": "float"
+      },
+      { 
+        "name": "Android Studio",
+        "icon": "android-studio.png",
+        "animation": "wave"
+      },
+            { 
+        "name": "X-code",
+        "icon": "xcode.png",
+        "animation": "bounce"
+      },
+      { 
+        "name": "Android",
+        "icon": "android.png",
+        "animation": "wave"
+      },
+            { 
+        "name": "AWS",
+        "icon": "aws.png",
+        "animation": "float"
+      },
+      { 
+        "name": "Docker",
+        "icon": "docker.png",
+        "animation": "bounce"
+      },
+            { 
+        "name": "github",
+        "icon": "github.png",
+        "animation": "wave"
+      },
+      { 
+        "name": "Javascript",
+        "icon": "javascript.png",
+        "animation": "float"
+      },
+            { 
+        "name": "MongoDB",
+        "icon": "mongodb.png",
+        "animation": "float"
+      },
+      { 
+        "name": "MySQL",
+        "icon": "mysql.png",
+        "animation": "pulse"
+      },
+      { 
+        "name": "Postgress",
+        "icon": "postgress.png",
+        "animation": "pulse"
+      },
+      { 
+        "name": "Redis",
+        "icon": "redis.png",
+        "animation": "bounce"
+      },
+            { 
+        "name": "Sequelize",
+        "icon": "sequelize.png",
+        "animation": "float"
+      },
+      { 
+        "name": "Unity",
+        "icon": "unity.png",
+        "animation": "pulse"
+      },
+      { 
+        "name": "Vue JS",
+        "icon": "vuejs.png",
+        "animation": "wave"
+      },
+      { 
+        "name": "Windows",
+        "icon": "win11.png",
+        "animation": "float"
       }
     ]
   },

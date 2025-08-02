@@ -215,7 +215,18 @@
 
    /* About Section
    -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
+   /* #about .profile-pic { display: none; } */
+   #about .profile-pic { 
+      .three.columns {
+         width: 100%;
+         float: none;
+         display: flex;
+         justify-content: center; /* Pusatkan horizontal */
+         align-items: center; /* Pusatkan vertikal (opsional) */
+         margin-bottom: 20px;
+      }
+   }
+   
    #about .download .button {
       width: 100%;
       text-align: center;
