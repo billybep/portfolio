@@ -120,7 +120,7 @@ class Resume extends Component {
                       data-category={tech.category}
                     >
                       <img 
-                        src={`/images/tech-stack/${tech.icon}`} 
+                        src={`images/tech-stack/${tech.icon}`} 
                         alt={tech.name}
                         className={`tech-logo ${tech.animation}`}
                       />
@@ -135,7 +135,7 @@ class Resume extends Component {
                       data-category={tech.category}
                     >
                       <img 
-                        src={`/images/tech-stack/${tech.icon}`} 
+                        src={`images/tech-stack/${tech.icon}`} 
                         alt={tech.name}
                         className={`tech-logo ${tech.animation}`}
                       />
