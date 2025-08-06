@@ -58,12 +58,6 @@ class Header extends Component {
                 Works
               </a>
             </li>
-
-            <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
-              </a>
-            </li>
           </ul>
         </nav>
 
@@ -76,15 +70,19 @@ class Header extends Component {
               <h3 className="underline-effect underline-effect--gradient">{description}.</h3>
             </Fade>
             <hr />
-            <Fade bottom duration={2000}>
-              <ul className="social">
-                <a href={project} className="button btn project-btn" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-book"></i>Game Project
+            <Fade bottom duration={1000}>
+              <div className="btn-container">
+                <a href={project} className="neo-btn" target="_blank" rel="noopener noreferrer">
+                  <span className="btn-text">
+                    <i className="fa fa-gamepad"></i> Game Project
+                  </span>
                 </a>
-                {/* <a href={github} className="button btn github-btn" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-github"></i>Github
-                </a> */}
-              </ul>
+                <a href="#portfolio" className="neo-btn smoothscroll">
+                  <span className="btn-text">
+                    <i className="fa fa-code"></i> Full Stack Project
+                  </span>
+                </a>
+              </div>
             </Fade>
           </div>
         </div>
