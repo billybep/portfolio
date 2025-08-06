@@ -15,8 +15,8 @@
     "state": "North Sulawesi",
     "zip": "95614"
     },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload":"https://drive.google.com/file/d/1wiQ45Ax17H5LjTsk0g1WDE-yqnOlBSPJ/view?usp=sharing",
+    "website": "https://billybep.github.io/portfolio",
+    "resumedownload":"https://drive.google.com/file/d/16Xqo-hWwY6ImueY3pXOijb11GrK-pPHp/view?usp=drive_link",
     "social":[
       {
         "name":"linkedin",
@@ -197,28 +197,16 @@
   "portfolio":{
     "projects": [
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"01.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title":"Wardeka: PvP Shooter",
+        "category":"Game",
+        "image":"project1.png",
+        "url":"https://play.google.com/store/apps/details?id=com.bigdade.wardekapvp&hl=en"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"02.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title":"Manado Post News",
+        "category":"News App",
+        "image":"project2.png",
+        "url":"https://apps.apple.com/id/app/manado-post/id6742392388"
       }
     ]
   }

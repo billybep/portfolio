@@ -265,8 +265,25 @@
 
    /* Portfolio Section
    /* ----------------------------------------------------------------- */
-   #portfolio-wrapper .columns { margin-bottom: 40px; }
-   .popup-modal {	max-width: 85%; }
+   /* #portfolio-wrapper .columns { margin-bottom: 40px; }
+   .popup-modal {	max-width: 85%; } */
+   /* Responsive adjustments */
+@media (max-width: 900px) {
+  .columns.portfolio-item {
+    width: 50%; /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .columns.portfolio-item {
+    width: 100%; /* 1 column on mobile */
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 
 
    /* Testimonials Section
