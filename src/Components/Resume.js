@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Slide from "react-reveal";
 import { Fade, Slide } from 'react-awesome-reveal';
 
 
@@ -38,7 +37,7 @@ class Resume extends Component {
             {/* <em className="place"> {work.place}</em> */}
           </h3>
           <p className="info">
-            {work.title}
+            {work.title + " "}
             <span>&bull;</span> <em className="date">{work.years}</em>
           </p>
           <p>{work.description}</p>
@@ -89,6 +88,7 @@ class Resume extends Component {
           </div>
         </Slide>
 
+        {/* Skills Section */}
         <Slide left duration={1300}>
           <div className="row skill">
             <div className="three columns header-col">
@@ -103,49 +103,47 @@ class Resume extends Component {
               <div className="bars">
                 <ul className="skills">{skills}</ul>
               </div>
-            </div>
-          </div>
-        </Slide>
 
-       <Fade duration={500}>
-          <div className="row tech-stack">
-            <div className="twelve columns">
-              <div className="tech-stack-container">
-                <div className="tech-stack-scroller">
-                  {/* First set */}
-                  {this.props.data.techStack.map((tech, index) => (
-                    <div 
-                      key={`first-${tech.name}`}
-                      className="tech-icon"
-                      data-category={tech.category}
-                    >
-                      <img 
-                        src={`images/tech-stack/${tech.icon}`} 
-                        alt={tech.name}
-                        className={`tech-logo ${tech.animation}`}
-                      />
+              <div className="row tech-stack">
+                <div className="twelve columns">
+                  <div className="tech-stack-container">
+                    <div className="tech-stack-scroller">
+                      {/* First set */}
+                      {this.props.data.techStack.map((tech, index) => (
+                        <div 
+                          key={`first-${tech.name}`}
+                          className="tech-icon"
+                          data-category={tech.category}
+                        >
+                          <img 
+                            src={`images/tech-stack/${tech.icon}`} 
+                            alt={tech.name}
+                            className={`tech-logo ${tech.animation}`}
+                          />
+                        </div>
+                      ))}
+                      
+                      {/* Duplicate for seamless looping */}
+                      {this.props.data.techStack.map((tech, index) => (
+                        <div 
+                          key={`second-${tech.name}`}
+                          className="tech-icon"
+                          data-category={tech.category}
+                        >
+                          <img 
+                            src={`images/tech-stack/${tech.icon}`} 
+                            alt={tech.name}
+                            className={`tech-logo ${tech.animation}`}
+                          />
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                  
-                  {/* Duplicate for seamless looping */}
-                  {this.props.data.techStack.map((tech, index) => (
-                    <div 
-                      key={`second-${tech.name}`}
-                      className="tech-icon"
-                      data-category={tech.category}
-                    >
-                      <img 
-                        src={`images/tech-stack/${tech.icon}`} 
-                        alt={tech.name}
-                        className={`tech-logo ${tech.animation}`}
-                      />
-                    </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </Fade>
+        </Slide>
       </section>
     );
   }
