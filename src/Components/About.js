@@ -15,6 +15,7 @@ class About extends Component {
     const phone = this.props.data.phone;
     const email = this.props.data.email;
     const resumeDownload = this.props.data.resumedownload;
+    const linkedin = this.props.data.linkedin;
 
     return (
       <section id="about">
@@ -52,6 +53,14 @@ class About extends Component {
                       <i className="fa fa-envelope"></i>
                       <a href={`mailto:${email}`}>{email}</a>
                     </div>
+                    {linkedin && (
+                      <div className="detail-item">
+                        <i className="fa fa-linkedin"></i>
+                        <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                          LinkedIn Profile
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

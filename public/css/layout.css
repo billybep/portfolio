@@ -199,102 +199,7 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   /* background: #000524; */
-   padding-top: 96px;
-   padding-bottom: 66px;
-   overflow: hidden;
-}
-
-#about a, #about a:visited  { color: #fff; }
-#about a:hover, #about a:focus { color: #0762f9; }
-
-#about h2 {
-   font: 22px/30px 'opensans-bold', sans-serif;
-   color: #fff;
-   margin-bottom: 12px;
-}
-#about p {
-   line-height: 30px;
-   color: #ccc;
-}
-#about .profile-pic {
-   position: relative;
-   width: 120px;
-   height: 120px;
-   border-radius: 100%;
-   position: relative;
-   width: 120px;
-   height: 120px;
-   border-radius: 100%;
-   object-fit: cover;
-   cursor: pointer;
-   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  
-  /* Efek Border Gradient */
-  border: 3px solid transparent;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff), 
-                    linear-gradient(45deg, #ff00cc, #3333ff);
-  
-  /* Efek Shadow Dasar */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
-}
-
-#about .profile-pic:hover {
-  /* Gabungan Efek */
-  transform: perspective(500px) rotateY(15deg) scale(1.1);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  
-  /* Animasi Gradient Border */
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff), 
-                    linear-gradient(45deg, #ff00cc, #00ccff);
-  animation: gradientMove 3s ease infinite;
-  
-  /* Efek Glow & Shadow */
-  box-shadow: 0 0 20px rgba(100,200,255,0.6),
-              inset 0 0 20px rgba(255,255,255,0.3);
-  filter: drop-shadow(0 0 15px #00ffff) brightness(1.05);
-  
-  /* Efek Pulsing */
-  animation: pulse 2s infinite, gradientMove 3s ease infinite;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(0,255,255,0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(0,255,255,0); }
-  100% { box-shadow: 0 0 0 0 rgba(0,255,255,0); }
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-#about .contact-details { width: 41.66667%; }
-#about .download {
-   width: 58.33333%;
-   padding-top: 6px;
-}
-#about .main-col { padding-right: 5%; }
-#about .download .button {
-   margin-top: 6px;
-   background: #444;
-}
-#about .download .button:hover {
-   background: #fff;
-   color: #2B2B2B;
-}
-#about .download .button i {
-   margin-right: 15px;
-   font-size: 20px;
-}
-
-/* About Section - Modern Design */
-#about {
-  background: rgba(0, 5, 36, 0.50); /* 85% opacity */
+  background: rgba(0, 5, 36, 0.75);
   padding: 80px 0;
   min-height: 100vh;
   display: flex;
@@ -326,6 +231,7 @@ ul#nav li.current a { color: #fe6928; }
   }
 }
 
+/* Profile Picture Styles */
 .profile-pic-wrapper {
   flex-shrink: 0;
   display: flex;
@@ -344,8 +250,9 @@ ul#nav li.current a { color: #fe6928; }
   border: 3px solid transparent;
   background-origin: border-box;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff), 
-                  linear-gradient(45deg, #ff00cc, #3333ff);
+  background-image: 
+    linear-gradient(to bottom, #ffffff, #ffffff), 
+    linear-gradient(45deg, #ff00cc, #3333ff);
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   filter: drop-shadow(0 0 10px rgba(0,0,0,0.3));
@@ -354,28 +261,31 @@ ul#nav li.current a { color: #fe6928; }
 .profile-pic:hover {
   transform: scale(1.05) rotateY(15deg);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff), 
-                  linear-gradient(45deg, #ff00cc, #00ccff);
+  background-image: 
+    linear-gradient(to bottom, #ffffff, #ffffff), 
+    linear-gradient(45deg, #ff00cc, #00ccff);
   box-shadow: 0 0 30px rgba(100,200,255,0.6);
-  animation: gradientMove 3s ease infinite, pulse 2s infinite;
+  animation: 
+    gradientMove 3s ease infinite, 
+    pulse 2s infinite;
 }
 
+/* Text Content Styles */
 .text-content {
   flex: 1;
   color: #fff;
 }
 
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 25px;
-  position: relative;
-  display: inline-block;
-
-  cursor: default;
-  transition: all 0.3s ease;
+#about h2 {
+   color: whitesmoke;
+   font-size: 2.5rem;
+   margin-bottom: 25px;
+   position: relative;
+   display: inline-block;
+   cursor: default;
 }
 
-h2::after {
+#about h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -383,42 +293,31 @@ h2::after {
   width: 60px;
   height: 3px;
   background: linear-gradient(to right, #ff00cc, #3333ff);
-
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform-origin: left center;
 }
 
-h2:hover::after {
+#about h2:hover::after {
   width: 100%;
   background: linear-gradient(to right, #ff00cc, #00ccff, #3333ff);
-  animation: gradientMove 3s ease infinite;
-}
-
-/* Optional: Add color pulse animation */
-@keyframes underlinePulse {
-  0% { opacity: 0.8; }
-  50% { opacity: 1; }
-  100% { opacity: 0.8; }
-}
-
-h2:hover::after {
   animation: 
     gradientMove 3s ease infinite,
     underlinePulse 2s ease infinite;
 }
 
 .bio-text {
-  line-height: 1.8;
+  line-height: 1.5;
+  margin-top: 15px;
   margin-bottom: 30px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #e0e0e0;
 }
 
+/* Contact Info Styles */
 .contact-info {
   margin-top: 40px;
 }
 
-h3 {
+.contact-info h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #fff;
@@ -446,11 +345,14 @@ h3 {
 }
 
 .detail-item i {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #00f2ff;
+  width: 20px;
+  text-align: center;
 }
 
-.detail-item span, .detail-item a {
+.detail-item span, 
+.detail-item a {
   color: #e0e0e0;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -460,6 +362,7 @@ h3 {
   color: #00f2ff;
 }
 
+/* Download Button Styles */
 .download-wrapper {
   display: flex;
   justify-content: center;
@@ -471,7 +374,6 @@ h3 {
   align-items: center;
   position: relative;
   padding: 16px 40px;
-  margin-top: 50;
   background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
   color: white;
   border-radius: 50px;
@@ -485,12 +387,7 @@ h3 {
 
 .resume-btn:hover {
   transform: translateY(-5px);
-  /* box-shadow: 0 10px 25px rgba(0, 242, 255, 0.4); */
-}
-
-.resume-btn:hover .fa-download {
-   color: white;
-   animation: bounce 0.8s ease infinite;
+  color: white;
 }
 
 .btn-icon {
@@ -501,6 +398,7 @@ h3 {
 
 .resume-btn:hover .btn-icon {
   transform: scale(1.2);
+  animation: bounce 0.8s ease infinite;
 }
 
 .btn-hover-effect {
@@ -522,6 +420,7 @@ h3 {
   opacity: 1;
 }
 
+/* Animations */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -534,27 +433,40 @@ h3 {
   100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
 }
 
-/* Background effects */
-#about::before {
+@keyframes underlinePulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Background Effects */
+#about::before,
+#about::after {
   content: '';
   position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#about::before {
   top: -50%;
   right: -20%;
   width: 600px;
   height: 600px;
   background: radial-gradient(circle, rgba(0,242,255,0.1) 0%, transparent 70%);
-  z-index: 1;
 }
 
 #about::after {
-  content: '';
-  position: absolute;
   bottom: -30%;
   left: -10%;
   width: 500px;
   height: 500px;
   background: radial-gradient(circle, rgba(255,0,247,0.1) 0%, transparent 70%);
-  z-index: 1;
 }
 
 
@@ -1820,7 +1732,32 @@ footer .social-links li:first-child { margin-left: 0; }
  	border-radius: 100%;
    
 }
-#go-top a:hover { background-color: #0F9095; }
+
+/* Color Animation - Same as Scroll Down Button */
+#go-top a:hover {
+  color: #00f2ff;
+  animation: gradientColors 3s linear infinite;
+  transform: none !important;
+}
+
+/* Same Gradient Animation */
+@keyframes gradientColors {
+  0% { color: #00f2ff; }
+  33% { color: #0762f9; }
+  66% { color: #00ccff; }
+  100% { color: #00f2ff; }
+}
+
+/* Optional: Add slight bounce effect */
+#go-top a:hover i {
+  display: inline-block;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
 
 
 .social .btn:first-child{
