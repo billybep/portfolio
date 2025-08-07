@@ -15,50 +15,73 @@ class About extends Component {
     const phone = this.props.data.phone;
     const email = this.props.data.email;
     const resumeDownload = this.props.data.resumedownload;
+    const linkedin = this.props.data.linkedin;
 
     return (
       <section id="about">
-        <Fade delay={300}>
-          <div className="row">
-            <div className="three columns">
-              <img
-                className="profile-pic"
-                src={profilepic}
-                alt="Nordic Giant Profile Pic"
-              />
-            </div>
-            <div className="nine columns main-col">
-              <h2>About Me</h2>
-
-              <p>{bio}</p>
-              <div className="row">
-                <div className="columns contact-details">
-                  <h2>Contact Details</h2>
-                  <p className="address">
-                    <span>{name}</span>
-                    <br />
-                    <span>
-                      {street}
-                      <br />
-                      {city} {state}, {zip}
-                    </span>
-                    <br />
-                    <span>{phone}</span>
-                    <br />
-                    <span>{email}</span>
-                  </p>
-                </div>
-                <div className="columns download">
-                  <p>
-                    <a href={resumeDownload} className="button button-base" target="_blank" rel="noopener noreferrer">
-                      <i className="fa fa-download"></i>Download Resume
-                    </a>
-                  </p>
+        <div className="about-container">
+          <Fade cascade damping={0.1} duration={800}>
+            <div className="profile-content">
+              <div className="profile-pic-wrapper">
+                <img
+                  className="profile-pic"
+                  src={profilepic}
+                  alt="Profile"
+                />
+              </div>
+              
+              <div className="text-content">
+                <h2>About Me</h2>
+                <p className="bio-text">{bio}</p>
+                
+                <div className="contact-info">
+                  <h3>Contact Details</h3>
+                  <div className="details-grid">
+                    <div className="detail-item">
+                      <i className="fa fa-user"></i>
+                      <span>{name}</span>
+                    </div>
+                    <div className="detail-item">
+                      <i className="fa fa-map-marker"></i>
+                      <span>{street}, {city}, {state} {zip}</span>
+                    </div>
+                    <div className="detail-item">
+                      <i className="fa fa-phone"></i>
+                      <a href={`tel:${phone}`}>{phone}</a>
+                    </div>
+                    <div className="detail-item">
+                      <i className="fa fa-envelope"></i>
+                      <a href={`mailto:${email}`}>{email}</a>
+                    </div>
+                    {linkedin && (
+                      <div className="detail-item">
+                        <i className="fa fa-linkedin"></i>
+                        <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                          LinkedIn Profile
+                        </a>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Fade>
+
+            <div className="download-wrapper">
+              <a 
+                href={resumeDownload} 
+                className="resume-btn"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span className="btn-icon">
+                  <i className="fa fa-download"></i>
+                </span>
+                <span className="btn-text">Download Resume</span>
+                <span className="btn-hover-effect"></span>
+              </a>
+            </div>
+          </Fade>
+        </div>
       </section>
     );
   }
