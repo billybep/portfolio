@@ -398,6 +398,23 @@
    footer .social-links { font-size: 20px; }
    footer .social-links li { margin-left: 14px; }   
 
+   /* Header button
+   ------------------------------------------------------------------------ */
+   @media (max-width: 768px) {
+      .btn-container {
+         flex-direction: column; /* Stack vertically */
+         align-items: center;
+         gap: 15px; /* Reduce gap for mobile */
+      }
+
+      .neo-btn {
+         width: 100%; /* Full width buttons */
+         max-width: 250px; /* But not too wide */
+         justify-content: center; /* Center content */
+         text-align: center;
+      }
+   }
+
 }
 
 
