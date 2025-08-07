@@ -40,7 +40,7 @@ class Portfolio extends Component {
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
-              <h1 className="portfolio-title">Live Projects I’ve Contributed To as a Developer.</h1>
+              <h2 className="portfolio-title">Live Projects I’ve Contributed To as a Developer.</h2>
               <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
                 {projects}
               </div>

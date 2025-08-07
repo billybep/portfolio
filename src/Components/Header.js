@@ -66,6 +66,10 @@ class Header extends Component {
             <Fade bottom>
               <h1 className="responsive-headline"><div className="underline-magic underline-magic--gradient">{name}</div></h1>
             </Fade>
+            <Fade bottom>
+              <p className="subtitle-text">Full Stack Developer · Game Developer</p>
+            </Fade>
+            <br />
             <Fade bottom duration={1200}>
               <h3 className="underline-effect underline-effect--gradient">{description}.</h3>
             </Fade>
