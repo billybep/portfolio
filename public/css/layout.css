@@ -100,25 +100,36 @@ header .social li a:hover { color: #0762f9; }
 
 /* scrolldown link */
 header .scrolldown a {
-   position: absolute;
-   bottom: 30px;
-   left: 50%;
-   margin-left: -29px;
-   color: #fff;
-   display: block;
-   height: 42px;
-   width: 42px;
-   font-size: 42px;
-   line-height: 42px;
-   color: #fff;
-   border-radius: 100%;
-
-   -webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-   -o-transition: all .3s ease-in-out;
-   transition: all .3s ease-in-out;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -29px;
+  color: #fff; 
+  display: block;
+  height: 42px;
+  width: 42px;
+  font-size: 42px;
+  line-height: 42px;
+  border-radius: 100%;
+  transition: all .3s ease-in-out;
 }
-header .scrolldown a:hover { color: #1abc9c; }
+
+/* Only animate the icon color */
+header .scrolldown a:hover {
+  color: #00f2ff; /* Start color */
+  animation: gradientColors 3s linear infinite;
+  background: transparent !important; 
+  transform: none !important;
+}
+
+/* Gradient color animation */
+@keyframes gradientColors {
+  0% { color: #00f2ff; }
+  33% { color: #0762f9; }
+  66% { color: #00ccff; }
+  100% { color: #00f2ff; }
+}
+
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -1110,9 +1121,20 @@ popup modal
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
 
+
 #portfolio {
-  background: #f5f7fa;
+  background: #c3dbff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
   padding: 80px 0;
+}
+
+/* Center the content vertically */
+.portfolio-content {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .portfolio-container {
@@ -1325,11 +1347,15 @@ popup modal
   opacity: 0.7;
 }
 
+/* Adjust the grid container */
 #portfolio-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 -15px; /* Counteract column padding */
+  margin: 0 -15px;
+  max-height: calc(100vh - 200px); /* Adjust based on your header/footer */
+  overflow-y: auto; /* Enable scrolling if content exceeds */
+  padding: 20px 0;
 }
 
 .columns.portfolio-item {
@@ -1792,6 +1818,7 @@ footer .social-links li:first-child { margin-left: 0; }
    font-size: 21px;
    line-height: 60px;
  	border-radius: 100%;
+   
 }
 #go-top a:hover { background-color: #0F9095; }
 
