@@ -107,6 +107,7 @@
       position: fixed;
       top: 0;
       right: 0;
+      display: inline-block;
    }
    #nav-wrap > a {
 	   width: 48px;
