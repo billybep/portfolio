@@ -4,6 +4,8 @@
     "description":"I code worlds, both on the web and in games. From snappy dashboards to epic game levels — I build stuff that people actually want to click, tap, and play.",
     "image":"profilepicnew.jpg",
     "bio":"Full stack by trade, game dev by passion. I work with React, Vue, and Node for the web, while Unity and C# power the worlds I create in games. Obsessed with clean code, smooth UX, and turning wild ideas into something you can actually play or click.",
+    "bioFormal": "Full stack developer and game creator with a passion for blending technology and imagination. I build responsive, scalable web apps using React, Vue, and Node.js, and craft immersive game experiences in Unity with C#. I believe in clean, maintainable code, intuitive design, and turning bold ideas into interactive experiences people can enjoy — whether on the web or in a game world.",
+    "bioCreative": "I turn coffee into code and ideas into realities. By day, I’m building responsive, high-performing web apps with React, Vue, and Node.js. By night, I’m crafting vibrant game worlds in Unity with C#, where imagination takes the lead. Whether it’s a click, a tap, or a jump in-game — I aim to make every interaction feel just right.",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
     "email": "billy.pesoth@gmail.com",
     "phone": "+6285146313141",
