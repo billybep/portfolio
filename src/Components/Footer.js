@@ -26,10 +26,7 @@ class Footer extends Component {
                 <li>&copy; Copyright 2025</li>
                 <li>
                   Design by{" "}
-                  {/* <a title="Bep" href="http://www.bep.com/">
-                    Bep
-                  </a> */}
-                    Bep
+                  Bep
                 </li>
               </ul>
             </div>
