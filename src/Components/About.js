@@ -2,12 +2,54 @@ import React, { Component } from "react";
 import { Fade } from 'react-awesome-reveal';
 
 class About extends Component {
+  constructor(props) {
+    super(props);
+    // Initialize state to store current bio and button status
+    this.state = {
+      currentBio: props.data?.bioFormal || '', // Default shows formal bio
+      isBioCreative: false // Tracks if creative bio is being shown
+    };
+    this.timer = null; // Will store our timeout reference
+  }
+
+  componentDidMount() {
+    // JIKA PROPS DATA TERDAPAT BIOFORMAL, SET SEBAGAI DEFAULT
+    if (this.props.data?.bioFormal) {
+      this.setState({ currentBio: this.props.data.bioFormal });
+    }
+  }
+
+  componentWillUnmount() {
+    // Clean up timer when component is removed to prevent memory leaks
+    if (this.timer) clearTimeout(this.timer);
+  }
+
+  toggleBio = () => {
+    const { bioCreative, bioFormal } = this.props.data;
+    
+    // Set state to show creative bio and disable button
+    this.setState({
+      currentBio: bioCreative,
+      isBioCreative: true
+    });
+
+    // Set timeout to revert back after 10 seconds
+    this.timer = setTimeout(() => {
+      this.setState({
+        currentBio: bioFormal,
+        isBioCreative: false
+      });
+    }, 5000); // 10000ms = 10 seconds
+  };
+
   render() {
     if (!this.props.data) return null;
+    // Destructure state and props for cleaner code
+    const { currentBio, isBioCreative } = this.state;
 
     const name = this.props.data.name;
     const profilepic = "images/" + this.props.data.image;
-    const bio = this.props.data.bio;
+
     const street = this.props.data.address.street;
     const city = this.props.data.address.city;
     const state = this.props.data.address.state;
@@ -31,11 +73,31 @@ class About extends Component {
               </div>
               
               <div className="text-content">
-                <h2>About Me</h2>
-                <p className="bio-text">{bio}</p>
+                {/* About Me Header with Toggle Button */}
+                  <div style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: '20px', 
+                    marginBottom: '15px' 
+                  }}>
+                    <h2>About Me</h2>
+                    {/* Bio Toggle Button */}
+                      <button 
+                        onClick={this.toggleBio}
+                        disabled={isBioCreative}
+                        className="bio-toggle-btn"
+                      >
+                        <i className="fa fa-gamepad"></i>
+                      </button>
+                  </div>
+                  
+                {/* Animated Bio Text */}
+                <p className={`bio-text ${isBioCreative ? 'creative-mode' : ''}`}>
+                  {currentBio || this.props.data.bioFormal}
+                </p>
                 
                 <div className="contact-info">
-                  <h3>Contact Details</h3>
+                  <h3>Contact Details-</h3>
                   <div className="details-grid">
                     <div className="detail-item">
                       <i className="fa fa-user"></i>
