@@ -187,14 +187,14 @@ header .scrolldown a:hover {
 
 /* primary navigation
 --------------------------------------------------------------------- */
-#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+/* #nav-wrap ul, #nav-wrap li, #nav-wrap a {
 	 margin: 0;
 	 padding: 0;
 	 border: none;
 	 outline: none;
 }
 
-/* nav-wrap */
+
 #nav-wrap {
    font: 12px 'opensans-bold', sans-serif;
    width: 100%;
@@ -208,14 +208,14 @@ header .scrolldown a:hover {
 }
 .opaque { background-color: #333; }
 
-/* hide toggle button */
+
 #nav-wrap > a.mobile-btn { display: none; }
 
 ul#nav {
    min-height: 48px;
    width: auto;
 
-   /* center align the menu */
+
    text-align: center;
 }
 ul#nav li {
@@ -225,10 +225,10 @@ ul#nav li {
    display: inline-block;
 }
 
-/* Links */
+
 ul#nav li a {
 
-/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+
 
    display: inline-block;
    padding: 8px 13px;
@@ -245,7 +245,174 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #fe6928; }
+ul#nav li.current a { color: #fe6928; } */
+
+
+/* Futuristic Holographic Nav */
+/* Modern Top Navbar with Right-Side Effects */
+/* Futuristic Line Animation Navbar */
+/* Modern Navbar with Letter Animation */
+#nav-wrap {
+  /* font-family: 'Orbitron', sans-serif; */
+  font: 18px/24px 'opensans-bold', sans-serif;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(10, 10, 15, 0.98);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: center;
+}
+
+ul#nav {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  list-style: none;
+}
+
+ul#nav li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.opaque { background-color: #333; }
+
+/* Link Styling */
+ul#nav li a {
+   font-family: inherit; /* Akan mewarisi Skolar Sans dari #nav-wrap */
+  display: inline-block;
+  padding: 25px 15px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Letter Animation Using text-shadow and transform */
+ul#nav li.current a {
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+}
+
+/* Modern CSS Approach (Chrome 111+ with flag enabled) */
+@supports (selector(::nth-letter(1))) {
+  ul#nav li.current a::nth-letter(1) {
+    animation: letterBounce 2s -0.0s ease-in-out infinite;
+  }
+  ul#nav li.current a::nth-letter(2) {
+    animation: letterBounce 2s -0.1s ease-in-out infinite;
+  }
+  ul#nav li.current a::nth-letter(3) {
+    animation: letterBounce 2s -0.2s ease-in-out infinite;
+  }
+  ul#nav li.current a::nth-letter(4) {
+    animation: letterBounce 2s -0.3s ease-in-out infinite;
+  }
+  ul#nav li.current a::nth-letter(5) {
+    animation: letterBounce 2s -0.4s ease-in-out infinite;
+  }
+}
+
+/* Fallback for most browsers */
+ul#nav li.current a {
+  background-image: linear-gradient(45deg, #00f2ff, #ff00f7, #ff0066);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+/* Underline Effect */
+ul#nav li a::before {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #00f2ff 25%, 
+    #ff00f7 50%, 
+    #ff0066 75%, 
+    transparent 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+ul#nav li a:hover::before,
+ul#nav li.current::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animations */
+@keyframes letterBounce {
+  0%, 100% { 
+    transform: translateY(0) scale(1);
+    text-shadow: 0 0 5px #00f2ff;
+  }
+  50% { 
+    transform: translateY(-5px) scale(1.2);
+    text-shadow: 0 0 15px #ff00f7;
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 8px rgba(0, 242, 255, 0.3), /* Glow lebih soft */
+      0 0 2px rgba(255, 0, 247, 0.2);   /* Inner shadow untuk kontras */
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 
+      0 0 12px rgba(0, 242, 255, 0.5), 
+      0 0 4px rgba(255, 0, 247, 0.3);
+    transform: scale(1.02); /* Scale lebih kecil */
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  ul#nav {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+  }
+  
+  ul#nav li {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+  
+  ul#nav li a {
+    padding: 15px 0; /* Atur padding vertikal saja */
+    display: inline-block; /* Biarkan underline mengikuti lebar teks */
+    width: auto; /* Hindari width 100% */
+  }
+
+  ul#nav li a::before {
+    width: 100%; /* Sesuaikan dengan lebar teks */
+    left: 0;
+    bottom: -5px; /* Posisi di bawah teks */
+    top: auto; /* Reset posisi atas */
+    transform-origin: center; /* Animasi dari tengah */
+  }
+}
+
+#nav-wrap > a.mobile-btn { display: none; }
 
 
 /* ------------------------------------------------------------------ */
