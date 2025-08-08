@@ -67,11 +67,11 @@ class Header extends Component {
               <h1 className="responsive-headline"><div className="underline-magic underline-magic--gradient">{name}</div></h1>
             </Fade>
             <Fade bottom>
-              <p className="subtitle-text">Full Stack Developer · Game Developer</p>
+              <p className="subtitle-text">Full Stack Developer  <span>&bull;</span> Game Developer</p>
             </Fade>
             <br />
             <Fade bottom duration={1200}>
-              <h3 className="underline-effect underline-effect--gradient">{description}.</h3>
+              <h3 className="underline-effect underline-effect--gradient" style={{ whiteSpace: 'pre-line' }}>{description}.</h3>
             </Fade>
             <hr />
             <Fade bottom duration={1000}>
