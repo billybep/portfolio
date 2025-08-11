@@ -157,7 +157,7 @@ class About extends Component {
 
               <a
                 href="#portfolio"
-                className="resume-btn"
+                className="resume-btn smoothscroll"
               >
                 <span className="btn-text">
                   <i className="fa fa-code"></i> Full Stack Project
