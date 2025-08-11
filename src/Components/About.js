@@ -144,7 +144,7 @@ class About extends Component {
               </a>
 
               <a 
-                href="#portfolio" 
+                href={project}
                 className="resume-btn"
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -155,11 +155,9 @@ class About extends Component {
                 <span className="btn-hover-effect"></span>
               </a>
 
-              <a 
-                href={project} 
+              <a
+                href="#portfolio"
                 className="resume-btn"
-                target="_blank" 
-                rel="noopener noreferrer"
               >
                 <span className="btn-text">
                   <i className="fa fa-code"></i> Full Stack Project
