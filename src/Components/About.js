@@ -49,6 +49,7 @@ class About extends Component {
 
     const name = this.props.data.name;
     const profilepic = "images/" + this.props.data.image;
+    const project = this.props.data.project;
 
     const street = this.props.data.address.street;
     const city = this.props.data.address.city;
@@ -97,7 +98,7 @@ class About extends Component {
                 </p>
                 
                 <div className="contact-info">
-                  <h3>Contact Details-</h3>
+                  <h3>Contact Details</h3>
                   <div className="details-grid">
                     <div className="detail-item">
                       <i className="fa fa-user"></i>
@@ -139,6 +140,30 @@ class About extends Component {
                   <i className="fa fa-download"></i>
                 </span>
                 <span className="btn-text">Download Resume</span>
+                <span className="btn-hover-effect"></span>
+              </a>
+
+              <a 
+                href="#portfolio" 
+                className="resume-btn"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                 <span className="btn-text">
+                  <i className="fa fa-gamepad"></i> Game Project
+                </span>
+                <span className="btn-hover-effect"></span>
+              </a>
+
+              <a 
+                href={project} 
+                className="resume-btn"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span className="btn-text">
+                  <i className="fa fa-code"></i> Full Stack Project
+                </span>
                 <span className="btn-hover-effect"></span>
               </a>
             </div>

@@ -235,6 +235,26 @@
    }
    #about .main-col { padding-right: 30px; }
 
+   /* Mobile responsiveness */
+   @media screen and (max-width: 768px) {
+   .download-wrapper {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center buttons */
+      gap: 15px; /* Reduce gap for mobile */
+   }
+
+   .resume-btn {
+      width: 80%; /* Make buttons wider on mobile */
+      max-width: 280px; /* But not too wide */
+      justify-content: center; /* Center button content */
+      padding: 14px 30px; /* Slightly smaller padding */
+   }
+
+   .btn-icon {
+      margin-right: 8px; /* Reduce icon spacing */
+   }
+   }
+
 
    /* Resume Section
    --------------------------------------------------------------------- */
