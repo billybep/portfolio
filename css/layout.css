@@ -1856,6 +1856,34 @@ call-to-action .button {
     cursor: default;
 }
 
+/* Logo Positioning */
+.nav-logo {
+  position: absolute;
+  left: 85px; /* 100px from left edge */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Precise vertical centering */
+  margin: 0; /* Remove any default margins */
+  z-index: 10; /* Ensure logo stays above other elements */
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.nav-logo img:hover {
+  opacity: 0.8;
+  transform: scale(1.05); /* Adjusted to maintain vertical center */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-logo {
+    display: none;
+  }
+}
+
 /* ------------------------------------------------------------------ */
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
