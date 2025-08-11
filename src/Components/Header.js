@@ -8,9 +8,9 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
+    // const project = this.props.data.project;
     // const github = this.props.data.github;
-    const name = this.props.data.name;
+    // const name = this.props.data.name;
     const description = this.props.data.description;
 
     return (
@@ -64,7 +64,7 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-              <h1 className="responsive-headline"><div className="underline-magic underline-magic--gradient">{name}</div></h1>
+              <h1 className="responsive-headline"><div className="underline-magic underline-magic--gradient">Hi, I'm Billy</div></h1>
             </Fade>
             <Fade bottom>
               <p className="subtitle-text">Full Stack Developer  <span>&bull;</span> Game Developer</p>
@@ -74,20 +74,6 @@ class Header extends Component {
               <h3 className="underline-effect underline-effect--gradient" style={{ whiteSpace: 'pre-line' }}>{description}.</h3>
             </Fade>
             <hr />
-            <Fade bottom duration={1000}>
-              <div className="btn-container">
-                <a href={project} className="neo-btn" target="_blank" rel="noopener noreferrer">
-                  <span className="btn-text">
-                    <i className="fa fa-gamepad"></i> Game Project
-                  </span>
-                </a>
-                <a href="#portfolio" className="neo-btn smoothscroll">
-                  <span className="btn-text">
-                    <i className="fa fa-code"></i> Full Stack Project
-                  </span>
-                </a>
-              </div>
-            </Fade>
           </div>
         </div>
 

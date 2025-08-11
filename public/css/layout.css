@@ -184,6 +184,31 @@ header .scrolldown a:hover {
   100% { color: #00f2ff; }
 }
 
+.row.banner {
+  position: relative;
+  text-align: left;
+  padding-left: 40px; /* Ruang untuk garis */
+}
+
+.row.banner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #00f2ff, #ff00f7);
+  
+  /* Solusi pasti bekerja: */
+  display: block !important; /* Force block display */
+  z-index: 1;
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2; /* Ensure text stays above particles */
+}
+
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -676,6 +701,7 @@ ul#nav li.current::before {
   display: flex;
   justify-content: center;
   margin-top: 60px;
+  gap: 20px; /* Adds consistent spacing between buttons */
 }
 
 .resume-btn {
