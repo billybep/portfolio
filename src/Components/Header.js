@@ -12,6 +12,7 @@ class Header extends Component {
     // const github = this.props.data.github;
     // const name = this.props.data.name;
     const description = this.props.data.description;
+    const logo = "images/" + this.props.data.logo;
 
     return (
       <header id="home">
@@ -27,6 +28,14 @@ class Header extends Component {
           level={6}/>
 
         <nav id="nav-wrap">
+
+          <div className="nav-logo">
+            <a href="#home" className="smoothscroll">
+              <img src={logo} alt="Your Logo" />
+              {/* <a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by Freepik - Flaticon</a> */}
+            </a>
+          </div>
+
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
           </a>
