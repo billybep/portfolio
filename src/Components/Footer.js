@@ -21,6 +21,7 @@ class Footer extends Component {
           <Fade bottom>
             <div className="twelve columns">
               <ul className="social-links">{networks}</ul>
+        <a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by Freepik - Flaticon</a>
 
               <ul className="copyright">
                 <li>&copy; Copyright 2025</li>
