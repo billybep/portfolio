@@ -16,11 +16,13 @@ class Portfolio extends Component {
       <div key={index} className="columns portfolio-item">
         <div className="item-wrap">
           <a href={projects.url} target="_blank" rel="noopener noreferrer">
-            <Zmage 
-              alt={projects.title} 
-              src={projectImage} 
-              className="portfolio-image"
-            />
+            <div className="image-wrapper">
+              <Zmage 
+                alt={projects.title} 
+                src={projectImage} 
+                className="portfolio-image"
+              />
+            </div>
             <div className="overlay">
               <div className="portfolio-item-meta">
                 <h5>{projects.title}</h5>
@@ -40,7 +42,7 @@ class Portfolio extends Component {
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
-              <h2 className="portfolio-title">Live Projects I’ve Contributed To as a Developer.</h2>
+              <h2 className="portfolio-title">Work & Projects</h2>
               <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
                 {projects}
               </div>
