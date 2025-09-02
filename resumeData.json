@@ -211,6 +211,12 @@
         "category":"News App",
         "image":"project2.png",
         "url":"https://apps.apple.com/id/app/manado-post/id6742392388"
+      },
+      {
+        "title":"Admin CMS",
+        "category":"Web App",
+        "image":"project3.png",
+        "url":"#portfolio"
       }
     ]
   }
