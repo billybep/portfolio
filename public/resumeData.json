@@ -222,7 +222,13 @@
         "title":"Admin CMS",
         "category":"Web App",
         "image":"project3.png",
-        "url":"#portfolio"
+        "url":"https://jdrsmpsvpcdbdfjjamja.supabase.co/storage/v1/object/public/Portfolio/project3.png"
+      },
+      {
+        "title":"Narwastu Connect - Dashboard",
+        "category":"Web App",
+        "image":"project5.png",
+        "url":"https://jdrsmpsvpcdbdfjjamja.supabase.co/storage/v1/object/public/Portfolio/Project2025-3.png"
       }
     ]
   }
